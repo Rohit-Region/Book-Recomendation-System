@@ -1,0 +1,390 @@
+/* Variables */
+:root {
+  --color-1: #d35266;
+  --color-2: #888;
+  --color-3: #383838;
+  --color-4: #d67e89;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'light';
+  src: url("../assets/fonts/HelveticaNeue-Light.ttf");
+}
+
+@font-face {
+  font-family: 'medium';
+  src: url("../assets/fonts/HelveticaNeue-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url("../assets/fonts/HelveticaNeu-Bold.ttf");
+}
+
+/* General styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font colors */
+
+.color-1 {
+  color: var(--color-1);
+}
+
+.color-2 {
+  color: var(--color-2);
+}
+
+.color-3 {
+  color: var(--color-3);
+}
+
+.color-white {
+  color: rgb(244, 242, 242);
+}
+
+/* background colors */
+
+.bg-color-1 {
+  background-color: var(--color-1);
+}
+
+
+.bg-color-3 {
+  background-color: var(--color-3);
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/* font styles */
+
+.font-style-1 {
+  font-family: 'light', sans-serif;
+}
+
+
+.font-style-3 {
+  font-family: 'bold', sans-serif;
+}
+
+/* display properties */
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* flex properties */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* paddings */
+
+.p-half {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.px-half {
+  padding: 0 0.5rem;
+}
+
+.py-half {
+  padding: 0.5rem 0;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pl-2 {
+  padding-left: 2rem;
+}
+
+.pl-3 {
+  padding-left: 3rem;
+}
+
+.pb-4 {
+  padding-bottom: 4rem;
+}
+
+/* margins */
+
+.my-half {
+  margin: 0.5rem 0;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.ml-half {
+  margin-left: 0.5rem;
+}
+
+.mr-half {
+  margin-right: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mx-half {
+  margin: 0 0.5rem;
+}
+
+
+/* font sizes */
+
+.font-size-lg {
+  font-size: 2rem;
+}
+
+.font-size-md {
+  font-size: 1.6rem;
+}
+
+.font-size-s {
+  font-size: 1.5rem;
+}
+
+.font-size-sm {
+  font-size: 1.1rem;
+}
+
+.font-size-xs {
+  font-size: 0.5rem;
+}
+
+/* miscellaneous */
+
+.h-200 {
+  height: 200px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.default-btn {
+  color: rgb(245, 239, 239);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.2rem;
+  max-width: 200px;
+}
+
+.default-btn:hover {
+  background-color: var(--color-2);
+  cursor: pointer;
+}
+
+.white-highlight:hover {
+  color: rgb(235, 227, 227);
+}
+
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+.list-style-none {
+  list-style-type: none;
+}
+
+html {
+  font-size: 10px;
+  /* background-color: #0c0c0c; */
+}
+
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+/* navbar styles */
+
+img[alt="bookshop-logo"],
+img[alt="user-img"] {
+  width: 7.5rem;
+  height: 5.5rem;
+}
+
+.navbar-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mail-notification {
+  position: relative;
+  left: 0;
+  top: -0.8rem;
+  padding: 0.2rem;
+}
+
+/* Hero Section */
+
+.giff 
+{
+  background-image: url("../assets/images/p1.gif");
+  background-size:cover;
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+.hero-form {
+  width: 700px;
+}
+
+.genre-selector {
+  font-size: 12px;
+  padding: 0.8rem;
+}
+
+/* Featured book */
+
+.featured-book {
+  max-width: 700px;
+}
+
+img[alt="cart-logo-2"] {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+/* Media queries */
+@media screen and (min-width: 474px) {
+  .purchase-details-container {
+    flex-direction: row;
+  }
+
+  .visible-in-sm {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .visible-in-md {
+    display: block;
+  }
+
+  .stock-btn {
+    display: block;
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  .hero-section {
+    display: flex;
+  }
+
+  .book-card {
+    width: 24%;
+  }
+
+  .book-card-img {
+    height: 250px;
+  }
+
+  
+}
+
+@media screen and (min-width: 1024px) {
+  .user-info {
+    display: flex;
+  }
+
+  .visible-in-lg {
+    display: block;
+  }
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Signin form
+    </title>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Book-shop</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
+    <style>
+	:root {
+      --main-color: #2980b9;
+    --form-bg: rgba(0, 0, 0, 0.8);
+    --border-color: #2980b9;
+    --form-color: #c6c6c6;
+    --form-input-bg: rgba(2, 2, 2, 0.22);
+
+    --border-radius: 10px;
+    --form-logo-size: 200px;
+    --form-max-width: 500px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* body {
+    font-family: "Source Sans Pro", sans-serif;
+    height: 100vh;
+    position:cover;
+    display: grid;
+    place-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    user-select: none;
+} */
+
+.form {
+    padding: 50px 60px;
+    background-color: var(--form-bg);
+    border-radius: var(--border-radius);
+    color: var(--form-color);
+    text-align: center;
+    width: 100%;
+    max-width: var(--form-max-width);
+}
+
+.form-logo {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.form-logo img {
+    width: var(--form-logo-size);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    background-color: var(--form-input-bg);
+    border: 2px solid transparent;
+    height: 46px;
+    width: 100%;
+    position: relative;
+    color: var(--form-color);
+    border-radius: var(--border-radius);
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.form-input::placeholder {
+    color: var(--form-color);
+}
+
+.form-input:focus {
+    border: 2px solid var(--border-color);
+}
+
+.form-input-icon {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-input-icon.err {
+    color: #c0392b;
+}
+
+.form-input-icon.success {
+    color: #27ae60;
+}
+
+.form-group.err .form-input-icon.err,
+.form-group.success .form-input-icon.success {
+    transform: scale(1);
+}
+
+.form-input-err-msg {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #c0392b;
+}
+
+.form-group-checkbox {
+    text-align: left;
+}
+
+.form-group-checkbox input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.form-group-checkbox label {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+
+.form-group-checkbox label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-color: var(--form-input-bg);
+}
+
+.form-group-checkbox label i {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    color: var(--main-color);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.form-group-checkbox input:checked + label i {
+    transform: scale(1);
+}
+
+.form-btn {
+    margin: 15px 0;
+    height: 46px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.form-social {
+    margin: 15px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-social-item {
+    display: grid;
+    place-items: center;
+    height: 44px;
+    width: calc(33% - 10px);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+}
+
+.form-social-item i {
+    font-size: 22px;
+    color: #fff;
+}
+
+.form-social-item.fb {
+    background-color: #3b5999;
+}
+
+.form-social-item.tw {
+    background-color: #1da1f2;
+}
+
+.form-social-item.gg {
+    background-color: #df4a32;
+}
+
+.form-txt {
+    margin-top: 15px;
+    font-size: 14px;
+    display: block;
+}
+
+.form-txt a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.form-txt a:hover {
+    text-decoration: underline;
+}
+
+
+	</style>
+</head>
+
+<body style="background-image: url(p2.jpg);">
+    <nav class="bg-color-3 d-flex justify-around p-1">
+        <ul class="list-style-none d-flex align-center justify-center">
+            <li>
+                <a class="image-highlight">
+                    <img src="book.gif" alt="bookshop-logo">
+                    <span class="color-white ">BOOKS COLLECTIONS</span>
+                </a>
+            </li>
+            <li class="pl-2 d-none visible-in-md">
+            <form action="" methods="POST">
+                <a href="/">
+                    <img src="home-run.svg" alt="home-logo" class="navbar-icon">
+                    <span class="color-1 white-highlight">HOME</span>
+                </a>
+            </form>
+            </li>
+            <li class="pl-2 d-none visible-in-md">
+                <a href="collection">
+                    <img src="bookshelf.svg" alt="collection-logo" class="navbar-icon">
+                    <span class="color-2 pl-1 white-highlight">COLLECTIONS</span>
+                </a>
+            </li>
+            <li class="pl-2">
+                <a href="aboutus">
+                    <img src="supermarket.svg" alt="cart-logo" class="navbar-icon">
+                    <span
+                        class="color-2 pl-1 white-highlight d-none visible-in-md">ABOUT US
+                    </span>
+                </a>
+            </li>
+            <li class="pl-2">
+                <a href="contactus">
+                    <img src="supermarket.svg" alt="cart-logo" class="navbar-icon">
+                    <span
+                        class="color-2 font-size-sm pl-1 white-highlight d-none visible-in-md">CONTACT US
+                    </span>
+                </a>
+            </li>	
+            </ul>
+            <form action="/sign_in" methods="POST">
+                <ul class="list-style-none d-flex justify-around align-center user-info">
+                    <li class="d-none visible-in-lg">
+                        <a href="sign_in">
+                            <span class="color-white gray-highlight" value="sign_in">LOGIN / SIGNUP</span>
+                        </a>
+                    </li>
+            </form>
+            <li>
+                <a href="sign_up.html">
+                    <img src="person.svg" alt="user-img" class="image-highlight pl-1">
+                </a>
+            </li>
+            <li class="pl-1">
+                <a href="search.html" class="search-btn default-btn bg-color-1">Search</a>
+            </li>
+        </ul>
+    </nav>
+    <div align="center" style="background-image: url(p2.jpg); background-repeat: no-repeat;background-size:auto;">
+    <div class="form" id="signin-form">
+		BOOK COLLECTION
+        <form action="" method="POST" > 
+            <a href="/" class="form-logo">
+                <img src="p4.png" alt="company logo">
+            </a>
+        </form>
+        <form action="/login__create" method="post" >
+        <div class="form-group">
+            <p><code id="output"></code></p>	
+            <span class="form-input-icon err">
+                <i class='bx bx-error-circle'></i>
+            </span>
+            <span class="form-input-icon success">
+                <i class='bx bx-check-circle'></i>
+            </span>
+        </div>
+		<div class="form-group">
+            <input type="text" name="username" class="form-input" placeholder="User Name" id="signin-phoneno" >
+            <span class="form-input-icon err">
+                <i class='bx bx-error-circle'></i>
+            </span>
+            <span class="form-input-icon success">
+                <i class='bx bx-check-circle'></i>
+            </span>
+        </div>
+        
+        <div class="form-group">
+            <input type="email" name="email" class="form-input" placeholder="Email" id="signin-email">
+            <span class="form-input-icon err">
+                <i class='bx bx-error-circle'></i>
+            </span>
+            <span class="form-input-icon success">
+                <i class='bx bx-check-circle'></i>
+            </span>
+            <span class="form-input-err-msg" data-err-for="signin-email"></span>
+        </div>
+		<div class="form-group">
+            <input type="password" name="password" class="form-input" placeholder="Password" id="signin-password">
+            <span class="form-input-icon err">
+                <i class='bx bx-error-circle'></i>
+            </span>
+            <span class="form-input-icon success">
+                <i class='bx bx-check-circle'></i>
+            </span>
+            <span class="form-input-err-msg" data-err-for="signin-password"></span>
+        </div>
+        <div class="form-group form-group-checkbox">
+            <input type="checkbox" name="remember" id="remember" checked="checked">
+            <label for="remember">
+                Show password
+                <i class='bx bx-check'></i>
+            </label>
+        </div>
+        <button class="form-btn" id="signin-btn">Create accont</button>
+        </form>
+        <span class="form-txt">
+            Do you have an account?
+            <form action="sign_in" method="POST" > 
+                <a href="sign_in">Sign in!</a>
+            </form>
+        </span>
+        
+           
+    <script>
+
+		let signin_form = document.querySelector('#signin-form')
+
+		let signin_btn = document.querySelector('#signin-btn')
+
+		validateEmail = (email) => {
+			const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+			return re.test(String(email).toLowerCase())
+		}
+
+		checkSigninInput = (input) => {
+			let err_span = signin_form.querySelector(`span[data-err-for="${input.id}"]`)
+			let val = input.value.trim()
+			let form_group = input.parentElement
+
+			switch(input.getAttribute('type')) {
+				case 'password':
+					if (val.length < 6) {
+						form_group.classList.add('err')
+						form_group.classList.remove('success')
+						err_span.innerHTML = 'Password must be at least 6 characters'
+					} else {
+						form_group.classList.add('success')
+						form_group.classList.remove('err')
+						err_span.innerHTML = ''
+					}
+					break;
+				case 'email':
+					if (val.length === 0 || !validateEmail(val)) {
+						form_group.classList.add('err')
+						form_group.classList.remove('success')
+						err_span.innerHTML = 'Email is invalid'
+					} else {
+						form_group.classList.add('success')
+						form_group.classList.remove('err')
+						err_span.innerHTML = ''
+					}
+			}
+		}
+
+		checkSigninForm = () => {
+			let inputs = signin_form.querySelectorAll('.form-input')
+			inputs.forEach(input => checkSigninInput(input))
+		}
+
+		signin_btn.onclick = () => {
+			checkSigninForm()
+		}
+
+		let inputs = signin_form.querySelectorAll('.form-input')
+		inputs.forEach(input => {
+			input.addEventListener('focusout', () => {
+				checkSigninInput(input)
+			})
+		})
+	</script>
+
+</body>
+
+</html>

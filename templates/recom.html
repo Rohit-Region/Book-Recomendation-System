@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Book-shop</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			table, td, th {  
+			border: 8px solid rgb(77, 75, 75);
+			text-align: left;
+			}
+	
+			table {
+			border-collapse: collapse;
+			width: 100%;
+			}
+	
+			th, td {
+			padding: 15px;
+			}
+			.checked {
+				color: orange;
+			}
+		</style>
+
+	</head>
+	
+		<body>
+			<nav class="bg-color-3 d-flex justify-around p-1">
+				<ul class="list-style-none d-flex align-center justify-center">
+					<li>
+						<a class="image-highlight">
+							<img src="book.gif" alt="bookshop-logo">
+							<span class="color-white ">BOOKS COLLECTIONS</span>
+						</a>
+					</li>
+					<li class="pl-2 d-none visible-in-md">
+						<a href="/">
+							<img src="home-run.svg" alt="home-logo" class="navbar-icon">
+							<span class="color-1 white-highlight">HOME</span>
+						</a>
+					</li>
+					<li class="pl-2 d-none visible-in-md">
+						<a href="#">
+							<img src="bookshelf.svg" alt="collection-logo" class="navbar-icon">
+							<span class="color-2 pl-1 white-highlight">COLLECTIONS</span>
+						</a>
+					</li>
+					<li class="pl-2">
+						<a href="#">
+							<img src="supermarket.svg" alt="cart-logo" class="navbar-icon">
+							<span
+								class="color-2 pl-1 white-highlight d-none visible-in-md">ABOUT US
+							</span>
+						</a>
+					</li>
+					<li class="pl-2">
+						<a href="#">
+							<img src="supermarket.svg" alt="cart-logo" class="navbar-icon">
+							<span
+								class="color-2 font-size-sm pl-1 white-highlight d-none visible-in-md">CONTACT US
+							</span>
+						</a>
+					</li>	
+				</ul>
+					<form action="/sign_in" methods="POST">
+						<ul class="list-style-none d-flex justify-around align-center user-info">
+							<li class="d-none visible-in-lg">
+								<a href="sign_in">
+									<span class="color-white gray-highlight" value="sign_in">LOGIN / SIGNUP</span>
+								</a>
+							</li>
+					</form>
+					<li>
+						<a href="sign_up.html">
+							<img src="person.svg" alt="user-img" class="image-highlight pl-1">
+						</a>
+					</li>
+					<li class="pl-1">
+						<a href="search.html" class="search-btn default-btn bg-color-1">Search</a>
+					</li>
+				</ul>
+			</nav>
+			<div>
+				<br>
+				<br>
+			</div>
+            <div align="center">
+				<table border="10px">
+					<tr style=font-size:20px>
+					{% for row in lis1 %}
+							  <th width="200px">{{row}}</th>
+					{% endfor %}
+					</tr>
+					{% for row in n2 %}
+					<tr style=font-size:15px>
+						{% for i in range(0,6) %}
+							{% if i==0 %}
+								<td><img src="{{row[i]}}" alt="cheeta" width="250" height="250"></td>
+							{% elif i==5 %}
+								{% if row[i] == "1" %}
+									 <td><span class="fa fa-star checked"></span></td>
+								{% elif row[i] == "2" %}
+									 <td>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+									</td>
+								{% elif row[i] == "3" %}
+									 <td>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+									</td>
+								{% elif row[i] == "4" %}
+									 <td>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+									</td>
+								{% elif row[i] == "5" %}
+									 <td>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+										 <span class="fa fa-star checked"></span>
+									</td>
+								{% else %} 
+									 <td width="100px" height="50px">{{row[i]}}</td>
+								{% endif %}   
+							 {% else %} 
+								 <td width="100px" height="50px">{{row[i]}}</td>
+							 {% endif %}
+							
+						{% endfor %}
+					</tr>
+					{% endfor %}
+			</table>
+		</div>
+	</body>
+</html>

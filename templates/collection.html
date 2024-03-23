@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-shop</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .button {
+            background-color: #076a67b1;
+            border: 2px solid black;
+            color: rgb(251, 247, 247);
+            width: 90%;
+            height: 100px;
+            padding: 10px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 4px;
+            cursor: pointer;
+            }
+            .button:hover {
+                box-shadow: 0 50px 50px 0 rgba(12, 0, 1, 0.24),0 50px 50px 0 rgba(8, 0, 0, 0.19);
+            }
+
+        table, td, th {  
+        border: 0px solid rgb(77, 75, 75);
+        text-align: left;
+        background-image:url(background1.jpg);
+		background-size:cover;
+        }
+
+        table {
+        border-collapse: collapse;
+        width:90%;
+        }
+    </style>    
+</head>
+
+    <body>
+      
+        <nav class="bg-color-3 d-flex justify-around p-1">
+            <ul class="list-style-none d-flex align-center justify-center">
+                <li>
+                    <a class="image-highlight">
+                        <img src="book.gif" alt="bookshop-logo">
+                        <span class="color-white ">BOOKS COLLECTIONS</span>
+                    </a>
+                </li>
+                <li class="pl-2 d-none visible-in-md">
+                <form action="" methods="POST">
+                    <a href="/">
+                        <img src="home-run.svg" alt="home-logo" class="navbar-icon">
+                        <span class="color-1 white-highlight">HOME</span>
+                    </a>
+                </form>    
+                </li>
+                <li class="pl-2 d-none visible-in-md">
+                    <a href="#">
+                        <img src="bookshelf.svg" alt="collection-logo" class="navbar-icon">
+                        <span class="color-2 pl-1 white-highlight">COLLECTIONS</span>
+                    </a>
+                </li>
+                <li class="pl-2">
+                    <a href="aboutus">
+                        <img src="supermarket.svg" alt="cart-logo" class="navbar-icon">
+                        <span
+                            class="color-2 pl-1 white-highlight d-none visible-in-md">ABOUT US
+                        </span>
+                    </a>
+                </li>
+                <li class="pl-2">
+                    <a href="contactus">
+                        <img src="supermarket.svg" alt="cart-logo" class="navbar-icon">
+                        <span
+                            class="color-2 font-size-sm pl-1 white-highlight d-none visible-in-md">CONTACT US
+                        </span>
+                    </a>
+                </li>	
+            </ul>
+                <form action="/sign_in" methods="POST">
+                    <ul class="list-style-none d-flex justify-around align-center user-info">
+                        <li class="d-none visible-in-lg">
+                            <a href="sign_in">
+                                <span class="color-white gray-highlight" value="sign_in">LOGIN / SIGNUP</span>
+                            </a>
+                        </li>
+                </form>
+                <li>
+                    <a href="sign_up.html">
+                        <img src="person.svg" alt="user-img" class="image-highlight pl-1">
+                    </a>
+                </li>
+                <li class="pl-1">
+                    <a href="search.html" class="search-btn default-btn bg-color-1">Search</a>
+                </li>
+            </ul>
+        </nav>
+           <p><h1 align="center">BOOK COLLECTIONS</h1></p>
+           <div align="center">
+             <form method="post" action="/sub1">
+                    <table border="0px" padding="90px"> 
+                        <tr>
+                             <th colspan="6"><h1 align="center">BOOKS CATEGORY</h1></th>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" value="0" name="action1" class="button">Arts & Photography</button></td>
+                            <td><button type="submit" value="1" name="action2" class="button">Biographies & Memoirs</button></td>
+                            <td><button type="submit" value="2" name="action3" class="button">Business & Money</button></td>
+                            <td><button type="submit" value="3" name="action78" class="button">Calendars</button></td>
+                            <td><button type="submit" value="4" name="action5" class="button">Children's Books</button></td>
+                            <td><button type="submit" value="5" name="action6" class="button">Comics & Graphic Novels</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="button" value="6" name="action7">Computers & Technology
+                            </button></td>
+                            <td><button type="submit" class="button" value="7" name="action8">Cookbooks, Food & Wine
+                            </button></td>
+                            <td><button type="submit" class="button" value="8" name="action9">Crafts, Hobbies & Home
+                            </button></td>
+                            <td><button type="submit" class="button" value="9" name="action10">Christian Books & Bibles
+                            </button></td>
+                            <td><button type="submit" class="button" value="10" name="action11">Engineering & Transportation
+                            </button></td>
+                            <td><button type="submit" class="button" value="11" name="action12">Health, Fitness & Dieting
+                            </button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="button" value="12" name="action13">History
+                            </button></td>
+                            <td><button type="submit" class="button" value="13" name="action14">Humor & Entertainment
+                            </button></td>
+                            <td><button type="submit" class="button" value="14" name="action15">Law
+                            </button></td>
+                            <td><button type="submit" class="button" value="15" name="action16">Literature & Fiction
+
+                            </button></td>
+                            <td><button type="submit" class="button" value="16" name="action17">Medical Books
+                            </button></td>
+                            <td><button type="submit" class="button" value="17" name="action18">Mystery, Thriller & Suspense
+                            </button></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="button" value="18" name="action19">Parenting & Relationships
+                            </button></td>
+                            <td><button type="submit" class="button" value="19" name="action20">Politics & Social Sciences
+                            </button></td>
+                            <td><button type="submit" class="button" value="20" name="action21">Reference
+                            </button></td>
+                            <td><button type="submit" class="button" value="21" name="action22">Religion & Spirituality
+                            </button></td>
+                            <td><button type="submit" class="button" value="22" name="action23">Romance
+                            </button></td>
+                            <td><button type="submit" class="button" value="23" name="action24">Science & Math
+                            </button></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="button" value="24" name="action25">Science Fiction & Fantasy
+                            </button></td>
+                            <td><button type="submit" class="button" value="25" name="action26">Self-Help
+                            </button></td>
+                            <td><button type="submit" class="button" value="26" name="action27">Sports & Outdoors
+                            </button></td>
+                            <td><button type="submit" class="button" value="27" name="action28">Teen & Young Adult
+                            </button></td>
+                            <td><button type="submit" class="button" value="28" name="action29">Test Preparations</button></td>
+                            <td><button type="submit" class="button" value="29" name="action30">Travel
+                            </button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="button" value="30" name="action31">Gay & Lesbian
+                            </button></td>
+                            <td><button type="submit" class="button" value="31" name="action32">Education & Teaching
+                            </button></td>
+                        </tr>
+                         
+                        </table>
+                  </div>
+                </form>
+                
+    </footer>
+</body>
+
+</html>

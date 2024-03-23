@@ -1,0 +1,80 @@
+<html>
+	<head>
+	<title></title>
+	<style>
+		.p1
+		{
+			background-image: url('voilet.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+			height: 10%;
+		}
+		
+		.p2 
+		{
+			background-color:black;
+			width: 100%;
+			height: 10%;
+		}
+		
+		.p3 
+		{
+			background-image: url('p1.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100%;
+		}
+		.button{
+			  border: none;
+			  color: black;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  cursor: pointer;
+		}
+		.button1:hover 
+		{
+			background-color: #4CAF50;
+			color: white;
+		}
+		.button2:hover 
+		{
+			background-color: #4CAF50;
+			color: white;
+		}
+		.button3:hover 
+		{
+			background-color: #4CAF50;
+			color: white;
+		}
+		.button4:hover 
+		{
+			background-color: #4CAF50;
+			color: white;
+			align:right;
+		}
+		
+		
+	</style>
+	</head>
+		<body>	
+					<div class="p2" bgcolor="white">
+						<button class="button button1">HOME</button>
+						<button class="button button2">ABOUT US</button>
+						<button class="button button3">CONTACT</button>
+						<button class="button button4" onClick="myFunction()">BOOK COLLECTION</button>
+					</div>
+					<div class="p3"></div>
+				
+		    <script>
+				  function myFunction() {
+					window.location.href="propertyregistration.html";
+				  }
+			</script>
+		
+		</body>
+</html>
